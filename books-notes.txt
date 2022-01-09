@@ -1,0 +1,13 @@
+RUN rails s on 3000
+    npm start --prefix client on 4000
+
+T- git remote rm origin
+T- git remote add origin git@github.com:tjmcgarry/books-rails-react.git
+T- git push -u origin main
+T- bundle install
+Configure yml file
+T- rails db:create
+T- npm install --prefix client 
+
+T- rails g resource User username email --no-test-framework
+T- rails g resource Book username email --no-test-framework
