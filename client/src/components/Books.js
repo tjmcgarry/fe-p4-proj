@@ -1,6 +1,6 @@
 import BookCard from "./BookCard";
 
-function Books({ books, setLikes, likes, onDelete }) {
+function Books({ books, setLikes, likes, onDelete, currentUser }) {
   return (
     <div>
       <h3>Books to Like </h3>
@@ -12,6 +12,7 @@ function Books({ books, setLikes, likes, onDelete }) {
               setLikes={setLikes}
               likes={likes}
               onDelete={onDelete}
+              currentUser={currentUser}
             />
           );
         })}

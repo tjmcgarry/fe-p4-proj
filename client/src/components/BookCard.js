@@ -1,9 +1,9 @@
 import Button from "@material-ui/core/Button";
 
-function BookCard({ book, setLikes, likes, onDelete }) {
+function BookCard({ book, setLikes, likes, onDelete, currentUser }) {
   function onLikeClick(id) {
     const newPost = {
-      user_id: 1,
+      user_id: currentUser.id,
       book_id: book.id,
       rating: 10,
       // author: book.author,

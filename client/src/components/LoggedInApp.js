@@ -36,7 +36,12 @@ function LoggedInApp({ setCurrentUser, currentUser }) {
       <p>
         <button onClick={handleLogout}>Logout</button>
       </p>
-      <Books books={books} setLikes={setLikes} likes={likes} />
+      <Books
+        books={books}
+        setLikes={setLikes}
+        likes={likes}
+        currentUser={currentUser}
+      />
       <Likes likes={likes} setLikes={setLikes} onDeleteLike={onDeleteLike} />
     </div>
   );
