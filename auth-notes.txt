@@ -1,0 +1,14 @@
+In routes ADD post '/signup', to: 'users#create' and exept: :create to resource :users 
+In user.rb ADD has_secure_password
+T- rails g migration AddPasswordDigestToUsers password_digest
+T- rails db:migrate 
+In users_controller add password to strong params
+In application_controller ADD def current_user
+                                @current_user ||= User.find_by(id: session[:user_id])
+                              end
+In users_controller replace create with => def create
+    user = User.create!(user_params)
+    session[:user_id] = user.id 
+    render json: user, status: :created 
+  end
+      
