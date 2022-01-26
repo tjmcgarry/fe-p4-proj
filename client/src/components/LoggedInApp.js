@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from "react";
 import Books from "./Books";
 import Likes from "./Likes";
+<<<<<<< HEAD
 import SearchBar from "./SearchBar";
+=======
+import BookForm from "./BookForm";
+>>>>>>> BookForm_component
 
 function LoggedInApp({ setCurrentUser, currentUser }) {
   const handleLogout = () => {
@@ -40,6 +44,7 @@ function LoggedInApp({ setCurrentUser, currentUser }) {
     setLikes(filteredLikes);
   }
 
+<<<<<<< HEAD
   // Ady added filter function to searchbar
   function searchAllBooks(textInSearchBar){
     console.log("textInSearchBar: ", textInSearchBar)
@@ -53,6 +58,12 @@ function LoggedInApp({ setCurrentUser, currentUser }) {
    setBookSearch([...filterResult])
   }
   // Ady added filter function to searchbar
+=======
+  function handleAddBooks(newBook) {
+    const newBooksArray = [newBook, ...books];
+    setBooks(newBooksArray)
+  }
+>>>>>>> BookForm_component
 
   return (
     <div>
@@ -60,6 +71,7 @@ function LoggedInApp({ setCurrentUser, currentUser }) {
       <p>
         <button onClick={handleLogout}>Logout</button>
       </p>
+<<<<<<< HEAD
 
       {/* Ady added searchbar component */}
       <SearchBar
@@ -67,6 +79,11 @@ function LoggedInApp({ setCurrentUser, currentUser }) {
       />
       {/* Ady added searchbar component */}
 
+=======
+      <BookForm
+        addBooks={handleAddBooks} 
+      />
+>>>>>>> BookForm_component
       <Books
         // Ady modified books component to passdown bookSearch as prop
         books={bookSearch} 
