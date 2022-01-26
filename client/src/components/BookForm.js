@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function BookForm() {
+function BookForm({addBooks}) {
   const [title, setTitle] = useState("");
   const [author, setAuthor] = useState("");
   const [img_url, setImg_Url] = useState("");
@@ -23,11 +23,12 @@ function BookForm() {
     })
       .then((r) => r.json())
       .then((newBook) => {
-        onAddProject(newBook);
+        addBooks(newBook);
       });
   }
 
   return (
+
     <section>
       <form onSubmit={handleSubmit} className="form" autoComplete="off">
         <h3>Add New Book</h3>
@@ -69,6 +70,8 @@ function BookForm() {
         <button type="submit">Add Book</button>
       </form>
     </section>
+
+  
   );
 }
 

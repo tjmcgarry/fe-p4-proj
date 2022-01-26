@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Books from "./Books";
 import Likes from "./Likes";
+import BookForm from "./BookForm";
+
 function LoggedInApp({ setCurrentUser, currentUser }) {
   const handleLogout = () => {
     setCurrentUser(null);
@@ -30,12 +32,20 @@ function LoggedInApp({ setCurrentUser, currentUser }) {
     setLikes(filteredLikes);
   }
 
+  function handleAddBooks(newBook) {
+    const newBooksArray = [newBook, ...books];
+    setBooks(newBooksArray)
+  }
+
   return (
     <div>
       Welcome {currentUser.username}!
       <p>
         <button onClick={handleLogout}>Logout</button>
       </p>
+      <BookForm
+        addBooks={handleAddBooks} 
+      />
       <Books
         books={books}
         setLikes={setLikes}
