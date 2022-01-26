@@ -45,6 +45,7 @@ function BookForm({addBooks}) {
           <p style={{ color: "red" }}>You must provide a title.</p>
         ) : null}
 
+        <label htmlFor="author">Author</label>
         <input
           type="text"
           id="author"
@@ -56,6 +57,7 @@ function BookForm({addBooks}) {
           <p style={{ color: "red" }}>You must provide an author.</p>
         ) : null}
 
+        <label htmlFor="img_url">Image URL</label>
         <input
           type="text"
           id="img_url"
