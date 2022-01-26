@@ -35,7 +35,7 @@ function LoginForm({ setCurrentUser }) {
   };
   return (
     <div>
-      <form onSubmit={handleSubmit}>
+      <form className="loginForm" onSubmit={handleSubmit}>
         <h1>Log In</h1>
         <p>
           <label htmlFor="username">Username </label>
@@ -48,7 +48,7 @@ function LoginForm({ setCurrentUser }) {
         </p>
         <p>
           <label htmlFor="password">Password </label>
-          <input
+          <input className="passwordInput" 
             type="password"
             name="password"
             value={formData.password}
@@ -59,7 +59,7 @@ function LoginForm({ setCurrentUser }) {
           <button type="submit">Log In</button>
         </p>
         <p>Don't have an account?</p>
-        <p>
+        <p className="link">
           <Link to="/signup">Sign Up</Link>
         </p>
       </form>

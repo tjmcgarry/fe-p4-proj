@@ -1,0 +1,221 @@
+.bookAppIntro{
+  margin-left: 1.5rem;
+  font-family: 'Roboto Slab', serif;
+}
+
+.loginForm {
+  margin-left: 2rem;
+  background-color: rgb(0, 204, 227);
+  padding: 2rem;
+  border-radius: 1rem;
+  font-family: 'Montserrat', sans-serif
+  }
+
+  .loginForm h1 {
+  font-family: 'Roboto Slab', serif;
+  }
+
+  .loginForm input {
+  border-radius: .25rem;
+  font-family: 'Roboto Slab', serif;
+  }
+
+  .loginForm button {
+  width: 5rem;
+  height: inherit;
+  background-color: #fff;
+  border-radius: .3rem;
+  font-family: 'Roboto Slab', serif;
+  font-size: 1rem;
+    }
+
+    .loginForm button:hover{
+  background-color: orange;
+    }
+
+.passwordInput{
+  margin-left: .5rem;
+}
+.signupFormEmail{
+  margin-left: 2.45rem;
+}
+.signupFormPassword{
+  margin-left: .5rem;
+}
+
+.loggedinBase{
+  font-family: 'Roboto Slab', serif;
+}
+
+.logoutButton{
+  width: 5rem;
+  height: inherit;
+  background-color: rgb(0, 204, 227);
+  border-radius: .3rem;
+  font-family: 'Roboto Slab', serif;
+  font-size: 1rem;
+  
+}
+
+.logoutButton:hover{
+  background-color: orange;
+}
+
+.bookDiv{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; 
+
+
+}
+
+.bookCard {
+  margin-left: 2rem;
+  max-width: 30rem;
+  max-height: inherit;
+
+  /* display: flex;
+  display: block; */
+  /* grid-template-rows: 1fr 1fr; */
+  background-color: rgb(0, 215, 238);
+  border-radius: 1.5rem;
+  margin-bottom: 2rem;
+
+}
+
+.bookCard img {
+max-height: 250px;
+max-width: inherit;
+display: block;
+margin-left: auto;
+margin-right: auto;
+margin-top: 2rem;
+
+}
+
+.bookCard h3 {
+  font-family: 'Roboto Slab', serif;
+  text-align: center;
+}
+
+.bookCard button {
+
+  background-color: #fff;
+  border-radius: .3rem;
+  font-family: 'Roboto Slab', serif;
+  font-size: 1rem;
+
+display: block;
+margin-left: auto;
+margin-right: auto;
+margin-bottom: 1rem;
+}
+
+.bookCard button:hover {
+background-color: orange;
+}
+
+.cardEnd{
+  height: .01rem;
+  width: inherit;
+}
+.likedRating{
+margin-left: 7.5rem;
+margin-bottom: 1rem;
+}
+
+.bookCard .likedDeleteButton{
+  margin-bottom: 2rem;
+  background-color: #fff;
+  border-bottom: lightblue;
+
+}
+
+
+
+.likedBooksH3{
+  font-size: 1.5rem;
+  margin-left: 1.5rem;
+}
+
+.booksToLikeH3{
+  font-size: 1.5rem;
+  margin-left: 1.5rem;
+}
+
+.sortButton{
+  width: 10rem;
+  height: inherit;
+  background-color:rgb(0, 204, 227);
+  border-radius: .3rem;
+  font-family: 'Roboto Slab', serif;
+  font-size: 1rem;
+  margin-left: 1rem;
+}
+
+.sortButton:hover{
+background-color: orange;
+}
+
+.sortButtons{
+  margin-left: 3rem;
+  margin-bottom: 2.5rem;
+}
+
+.NavBar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family:'Roboto Slab', serif;
+
+  background-color: rgb(0, 204, 227);
+  
+}
+
+.NavBar li{
+  float: left;
+  border-style: outset;
+  border-color: lightblue;
+
+
+  
+}
+
+.NavBar li a{
+  display: block;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  padding: 8px 20px;
+  color: black;
+  
+
+}
+
+.NavBar li:hover{
+background-color: orange;
+
+}
+
+ul.NavBar li.right {
+  float: right; 
+  margin-right: 2rem;
+}
+
+@media only screen and (min-width: 25em) {
+  .bookDiv {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media only screen and (min-width: 38em) {
+  .bookDiv {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (min-width: 60em) {
+  .bookDiv {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

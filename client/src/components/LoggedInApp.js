@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
+
 import Books from "./Books";
 import Likes from "./Likes";
+import NavBar from "./NavBar";
 function LoggedInApp({ setCurrentUser, currentUser }) {
   const handleLogout = () => {
     setCurrentUser(null);
@@ -31,16 +33,18 @@ function LoggedInApp({ setCurrentUser, currentUser }) {
   }
 
   return (
-    <div>
+    <div className="loggedinBase">
+      <NavBar currentUser={currentUser} />
       Welcome {currentUser.username}!
       <p>
-        <button onClick={handleLogout}>Logout</button>
+        <button className="logoutButton" onClick={handleLogout}>Logout</button>
       </p>
       <Books
         books={books}
         setLikes={setLikes}
         likes={likes}
         currentUser={currentUser}
+        setBooks={setBooks}
       />
       <Likes likes={likes} setLikes={setLikes} onDeleteLike={onDeleteLike} />
     </div>

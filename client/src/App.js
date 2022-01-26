@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import LoggedInApp from "./components/LoggedInApp";
 import LoggedOutApp from "./components/LoggedOutApp";
+import "./index.css";
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
@@ -27,7 +28,7 @@ function App() {
   }
   return (
     <div>
-      <h1>Books App</h1>
+      <h1 className="bookAppIntro">Books App</h1>
 
       <Router>
         {currentUser ? (

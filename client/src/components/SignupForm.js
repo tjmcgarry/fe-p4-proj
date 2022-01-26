@@ -38,7 +38,7 @@ function SignupForm({ setCurrentUser }) {
   };
   return (
     <div>
-      <form onSubmit={handleSubmit}>
+      <form className="loginForm"onSubmit={handleSubmit}>
         <h1>Sign Up</h1>
         <p>
           <label htmlFor="username">Username </label>
@@ -53,6 +53,7 @@ function SignupForm({ setCurrentUser }) {
           <label htmlFor="email">Email </label>
           <input
             type="text"
+            className="signupFormEmail"
             name="email"
             value={formData.email}
             onChange={(e) => handleChange(e)}
@@ -62,6 +63,7 @@ function SignupForm({ setCurrentUser }) {
           <label htmlFor="password">Password </label>
           <input
             type="password"
+            className="signupFormPassword"
             name="password"
             value={formData.password}
             onChange={(e) => handleChange(e)}

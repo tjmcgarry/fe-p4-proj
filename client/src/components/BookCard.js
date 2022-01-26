@@ -27,9 +27,9 @@ function BookCard({ book, setLikes, likes, onDelete, currentUser }) {
   }
 
   return (
-    <div>
+    <div className="bookCard">
       <img src={book.img_url} alt="book"></img>
-      <h3>{book.title}</h3>
+      <h3 className="bookTitle">{book.title}</h3>
       <h3>{book.author}</h3>
       <Button onClick={() => onLikeClick(book.id)}>Add to Likes</Button>
     </div>
