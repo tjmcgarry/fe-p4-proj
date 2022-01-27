@@ -14,7 +14,7 @@ function BookForm({addBooks}) {
       img_url,
     };
 
-    fetch("http://localhost:3000/books", {
+    fetch("/books", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -33,7 +33,7 @@ function BookForm({addBooks}) {
       <form onSubmit={handleSubmit} className="form" autoComplete="off">
         <h3>Add New Book</h3>
 
-        <label htmlFor="title">Title</label>
+        <label htmlFor="title">Title: </label>
         <input
           type="text"
           id="title"
@@ -44,8 +44,8 @@ function BookForm({addBooks}) {
         {title.length === 0 ? (
           <p style={{ color: "red" }}>You must provide a title.</p>
         ) : null}
-
-        <label htmlFor="author">Author</label>
+        <br></br>
+        <label htmlFor="author">Author: </label>
         <input
           type="text"
           id="author"
@@ -56,8 +56,8 @@ function BookForm({addBooks}) {
         {author.length === 0 ? (
           <p style={{ color: "red" }}>You must provide an author.</p>
         ) : null}
-
-        <label htmlFor="img_url">Image URL</label>
+        <br></br>
+        <label htmlFor="img_url">Image URL: </label>
         <input
           type="text"
           id="img_url"
@@ -68,7 +68,7 @@ function BookForm({addBooks}) {
         {img_url.length === 0 ? (
           <p style={{ color: "red" }}>You must provide a title</p>
         ) : null}
-
+        <br></br>
         <button type="submit">Add Book</button>
       </form>
     </section>

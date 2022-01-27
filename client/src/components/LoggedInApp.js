@@ -1,16 +1,9 @@
 import React, { useState, useEffect } from "react";
-
 import Books from "./Books";
 import Likes from "./Likes";
-
 import NavBar from "./NavBar";
-
-
 import SearchBar from "./SearchBar";
-
 import BookForm from "./BookForm";
-
-
 
 function LoggedInApp({ setCurrentUser, currentUser }) {
   const handleLogout = () => {
@@ -77,26 +70,20 @@ function LoggedInApp({ setCurrentUser, currentUser }) {
       <p>
         <button className="logoutButton" onClick={handleLogout}>Logout</button>
       </p>
-
-
-      {/* Ady added searchbar component */}
-      <SearchBar
-        invDataFlow={searchAllBooks} 
-      />
-      {/* Ady added searchbar component */}
-
-
+      
       <BookForm
         addBooks={handleAddBooks} 
       />
-
+      <SearchBar
+        invDataFlow={searchAllBooks} 
+      />
       <Books
-        // Ady modified books component to passdown bookSearch as prop
-        books={bookSearch} 
+        books={bookSearch}
+        // books={books} 
         setLikes={setLikes}
         likes={likes}
         currentUser={currentUser}
-        setBooks={setBooks}
+        setBooks={setBookSearch}
       />
       <Likes likes={likes} setLikes={setLikes} onDeleteLike={onDeleteLike} />
     </div>

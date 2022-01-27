@@ -4,6 +4,8 @@ import React, { useState } from "react";
 function SearchBar(props) {
     const [searchBarContent, setSearchBarContent] = useState("")
     return (
+        <div>
+            <label>Search for a Book: </label>
         <input 
             onChange={
                 (synthEvent)=>{
@@ -16,6 +18,7 @@ function SearchBar(props) {
             value={searchBarContent}
 
         />
+        </div>
     )
 }
 
