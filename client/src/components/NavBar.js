@@ -9,7 +9,7 @@ function NavBar({currentUser}){
     <li> <a>Home</a></li>
     <li> <a>Add A Book</a></li>
     <li> <a>About Us</a></li>
-    <li> <a>Content C</a></li>
+    <li> <a>Coming Soon</a></li>
     <li className="right"> <a href="/login">Logged In As {currentUser.username} </a></li>
     </ul>
 

@@ -23,6 +23,8 @@ function LoggedInApp({ setCurrentUser, currentUser }) {
   const [likes, setLikes] = useState([]);
   const [bookSearch, setBookSearch] = useState([]) // Ady added book search state
   console.log("bookSearch: ", bookSearch)
+  const [displaySearch, setDisplaySearch] = useState(false)
+  const [displayPostForm, setDisplayPostForm] = useState(false)
 
   useEffect(() => {
     fetch("/books")
@@ -47,6 +49,14 @@ function LoggedInApp({ setCurrentUser, currentUser }) {
     });
     const filteredLikes = likes.filter((book) => book.id !== id);
     setLikes(filteredLikes);
+  }
+
+  function display(){
+    setDisplaySearch(!displaySearch)
+  }
+
+  function displayPost(){
+    setDisplayPostForm(!displayPostForm)
   }
 
 
@@ -82,21 +92,27 @@ function LoggedInApp({ setCurrentUser, currentUser }) {
       {/* Ady added searchbar component */}
       <SearchBar
         invDataFlow={searchAllBooks} 
+        display={display}
+        displaySearch={displaySearch}
       />
       {/* Ady added searchbar component */}
 
 
       <BookForm
         addBooks={handleAddBooks} 
+        displayPostForm={displayPostForm}
+        displayPost={displayPost}
       />
 
       <Books
         // Ady modified books component to passdown bookSearch as prop
+        // booksAll={books}
         books={bookSearch} 
         setLikes={setLikes}
         likes={likes}
         currentUser={currentUser}
         setBooks={setBooks}
+        setBookSearch={setBookSearch}
       />
       <Likes likes={likes} setLikes={setLikes} onDeleteLike={onDeleteLike} />
     </div>

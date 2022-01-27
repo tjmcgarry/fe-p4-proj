@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function BookForm({addBooks}) {
+function BookForm({addBooks, displayPost, displayPostForm}) {
   const [title, setTitle] = useState("");
   const [author, setAuthor] = useState("");
   const [img_url, setImg_Url] = useState("");
@@ -30,8 +30,10 @@ function BookForm({addBooks}) {
   return (
 
     <section>
-      <form onSubmit={handleSubmit} className="form" autoComplete="off">
-        <h3>Add New Book</h3>
+      <button onClick={displayPost} className="addBookButton">Add A Book </button>
+      {displayPostForm ?  
+      <form className="submitForm" onSubmit={handleSubmit}  autoComplete="off">
+        <h3>Add A New Book</h3>
 
         <label htmlFor="title">Title</label>
         <input
@@ -43,7 +45,7 @@ function BookForm({addBooks}) {
         />
         {title.length === 0 ? (
           <p style={{ color: "red" }}>You must provide a title.</p>
-        ) : null}
+        ) : <p style={{ color: "white" }}>You must provide a title.</p>}
 
         <label htmlFor="author">Author</label>
         <input
@@ -55,7 +57,7 @@ function BookForm({addBooks}) {
         />
         {author.length === 0 ? (
           <p style={{ color: "red" }}>You must provide an author.</p>
-        ) : null}
+        ) : <p style={{color: "white" }}>You must provide an author.</p>}
 
         <label htmlFor="img_url">Image URL</label>
         <input
@@ -67,10 +69,11 @@ function BookForm({addBooks}) {
         />
         {img_url.length === 0 ? (
           <p style={{ color: "red" }}>You must provide a title</p>
-        ) : null}
+        ) : <p style={{ color: "white" }}>You must provide a title</p>}
 
-        <button type="submit">Add Book</button>
+        <button className="addBookButton" type="submit">Add Book</button>
       </form>
+: <div></div>}
     </section>
 
   

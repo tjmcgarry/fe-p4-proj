@@ -1,6 +1,6 @@
 import BookCard from "./BookCard";
 
-function Books({ books, setBooks, setLikes, likes, onDelete, currentUser }) {
+function Books({ books, setBooks, setBookSearch, setLikes, likes, onDelete, currentUser }) {
   
 
 
@@ -21,6 +21,7 @@ function Books({ books, setBooks, setLikes, likes, onDelete, currentUser }) {
   }
 
   function sortByAuthor(){
+
   return [...books].sort(function(a, b){
     var nameA = a.author.toUpperCase(); // ignore upper and lowercase
     var nameB = b.author.toUpperCase(); // ignore upper and lowercase
@@ -36,12 +37,12 @@ function Books({ books, setBooks, setLikes, likes, onDelete, currentUser }) {
 
   function sortBooks(){
     let sortedBooks = sortByTitle()
-     setBooks(sortedBooks)
+    setBookSearch(sortedBooks)
    }
 
    function sortAuthor(){
      let sortedBooks = sortByAuthor()
-     setBooks(sortedBooks)
+     setBookSearch(sortedBooks)
    }
 
 
