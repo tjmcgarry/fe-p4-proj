@@ -82,7 +82,7 @@ function LoggedInApp({ setCurrentUser, currentUser }) {
 
   return (
     <div className="loggedinBase">
-      <NavBar currentUser={currentUser} />
+      <NavBar currentUser={currentUser} displayPost={displayPost} display={display} />
       Welcome {currentUser.username}!
       <p>
         <button className="logoutButton" onClick={handleLogout}>Logout</button>

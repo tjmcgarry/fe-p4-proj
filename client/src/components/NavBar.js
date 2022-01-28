@@ -1,4 +1,4 @@
-function NavBar({currentUser}){
+function NavBar({currentUser, displayPost, display}){
 
 
 
@@ -7,8 +7,8 @@ function NavBar({currentUser}){
     <nav>
     <ul className="NavBar">
     <li> <a>Home</a></li>
-    <li> <a>Add A Book</a></li>
-    <li> <a>About Us</a></li>
+    <li> <a onClick={displayPost}>Add A Book</a></li>
+    <li> <a onClick={display}>Search For Book</a></li>
     <li> <a>Coming Soon</a></li>
     <li className="right"> <a href="/login">Logged In As {currentUser.username} </a></li>
     </ul>
